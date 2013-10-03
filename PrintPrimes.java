@@ -2,20 +2,18 @@ public class PrintPrimes {
   int numberOfPrimes;
   int RR;
   int CC;
-  int ORDMAX;
   int listOfPrimes[];
 
-  public PrintPrimes(int numberOfPrimes, int RR, int CC, int ORDMAX) {
+  public PrintPrimes(int numberOfPrimes, int RR, int CC) {
     this.numberOfPrimes   = numberOfPrimes;
     this.RR  = RR;
     this.CC  = CC;
-    this.ORDMAX = ORDMAX;
     this.listOfPrimes = new int[numberOfPrimes + 1];
   }
 
 
   public static void main(String[] args) {
-      PrintPrimes printPrimes = new PrintPrimes(300, 50, 4, 30);
+      PrintPrimes printPrimes = new PrintPrimes(300, 50, 4);
       printPrimes.calculatePrimes();
       printPrimes.printPrimes();
   }
@@ -33,7 +31,7 @@ public class PrintPrimes {
   private void calculateOddPrimes() {
       boolean isCurrentNumberPrime;
       int N;
-      int listOfMultiples[] = new int[ORDMAX + 1];
+      int listOfMultiples[] = new int[numberOfPrimes + 1];
 
       int currentNumber = 1;
       int ORD = 2;
