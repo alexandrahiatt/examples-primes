@@ -34,16 +34,16 @@ public class PrintPrimes {
       int listOfMultiples[] = new int[numberOfPrimes + 1];
 
       int currentNumber = 1;
-      int ORD = 2;
+      int index = 2;
       int squareOfPrimeToCheck = 9;
 
       for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
         do {
           currentNumber = currentNumber + 2;
           if (currentNumber == squareOfPrimeToCheck) {
-            listOfMultiples[ORD] = currentNumber;
-            ORD = ORD + 1;
-            squareOfPrimeToCheck = listOfPrimes[ORD] * listOfPrimes[ORD];
+            listOfMultiples[index] = currentNumber;
+            index = index + 1;
+            squareOfPrimeToCheck = listOfPrimes[index] * listOfPrimes[index];
           }
           N = 2;
           isCurrentNumberPrime = true;
