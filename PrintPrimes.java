@@ -3,12 +3,14 @@ public class PrintPrimes {
   int RR;
   int CC;
   int listOfPrimes[];
+  int listOfMultiples[];
 
   public PrintPrimes(int numberOfPrimes, int RR, int CC) {
     this.numberOfPrimes   = numberOfPrimes;
     this.RR  = RR;
     this.CC  = CC;
     this.listOfPrimes = new int[numberOfPrimes + 1];
+    listOfMultiples[] = new int[numberOfPrimes + 1];
   }
 
 
@@ -31,7 +33,6 @@ public class PrintPrimes {
   private void calculateOddPrimes() {
       boolean isCurrentNumberPrime;
       int N;
-      int listOfMultiples[] = new int[numberOfPrimes + 1];
 
       int currentNumber = 1;
       int index = 2;
