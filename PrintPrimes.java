@@ -50,7 +50,7 @@ public class PrintPrimes {
           while (N < ORD && isCurrentNumberPrime) {
             while (listOfMultiples[N] < currentNumber)
               listOfMultiples[N] = listOfMultiples[N] + listOfPrimes[N] + listOfPrimes[N];
-            if (listOfMultiples[N] == J)
+            if (listOfMultiples[N] == currentNumber)
               isCurrentNumberPrime = false;
             N = N + 1;
           }
