@@ -35,15 +35,15 @@ public class PrintPrimes {
 
       int currentNumber = 1;
       int ORD = 2;
-      int SQUARE = 9;
+      int squareOfPrimeToCheck = 9;
 
       for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
         do {
           currentNumber = currentNumber + 2;
-          if (currentNumber == SQUARE) {
+          if (currentNumber == squareOfPrimeToCheck) {
             listOfMultiples[ORD] = currentNumber;
             ORD = ORD + 1;
-            SQUARE = listOfPrimes[ORD] * listOfPrimes[ORD];
+            squareOfPrimeToCheck = listOfPrimes[ORD] * listOfPrimes[ORD];
           }
           N = 2;
           isCurrentNumberPrime = true;
