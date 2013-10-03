@@ -48,7 +48,7 @@ public class PrintPrimes {
           }
           N = 2;
           isCurrentNumberPrime = true;
-          while (N < ORD && isCurrentNumberPrime) {
+          while (N < index && isCurrentNumberPrime) {
             while (listOfMultiples[N] < currentNumber)
               listOfMultiples[N] = listOfMultiples[N] + listOfPrimes[N] + listOfPrimes[N];
             if (listOfMultiples[N] == currentNumber)
