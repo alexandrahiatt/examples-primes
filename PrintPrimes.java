@@ -36,7 +36,7 @@ public class PrintPrimes {
 
   private void calculateOddPrimes() {
       boolean isCrossedOff;
-      int N;
+      int currentIndex;
 
       int currentNumber = 1;
       int largestMultipleIndex = 2;
@@ -50,14 +50,14 @@ public class PrintPrimes {
             largestMultipleIndex = largestMultipleIndex + 1;
             squareOfPrimeToCheck = listOfPrimes[largestMultipleIndex] * listOfPrimes[largestMultipleIndex];
           }
-          N = 2;
+          currentIndex = 2;
           isCrossedOff = false;
-          while (N < largestMultipleIndex && !isCrossedOff) {
-            while (listOfMultiples[N] < currentNumber)
-              setNextMultipleToCheck(N);
-            if (listOfMultiples[N] == currentNumber)
+          while (currentIndex < largestMultipleIndex && !isCrossedOff) {
+            while (listOfMultiples[currentIndex] < currentNumber)
+              setNextMultipleToCheck(currentIndex);
+            if (listOfMultiples[currentIndex] == currentNumber)
               isCrossedOff = true;
-            N = N + 1;
+            currentIndex = currentIndex + 1;
           }
         } while (isCrossedOff);
         listOfPrimes[primesFoundSoFar] = currentNumber;
