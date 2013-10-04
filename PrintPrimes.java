@@ -5,6 +5,7 @@ public class PrintPrimes {
  
   int linesPerColumn;
   int columnsPerPage;
+  int PAGENUMBER = 1;
 
   public PrintPrimes(int numberOfPrimes, int linesPerColumn, int columnsPerPage) {
     this.numberOfPrimes = numberOfPrimes;
@@ -64,12 +65,9 @@ public class PrintPrimes {
     }
 
     public void printPrimes() {
-        int PAGENUMBER = 1;
         int PAGEOFFSET = 1;
         while (PAGEOFFSET <= numberOfPrimes) {
-          System.out.println("The First " + numberOfPrimes +
-                               " Prime Numbers --- Page " + PAGENUMBER);
-          System.out.println("");
+          printCurrentPageHeading();
           for (int ROWOFFSET = PAGEOFFSET; ROWOFFSET < PAGEOFFSET + linesPerColumn; ROWOFFSET++){
             for (int i = 0; i < columnsPerPage; i++)
               if (ROWOFFSET + i * linesPerColumn <= numberOfPrimes)
@@ -77,9 +75,15 @@ public class PrintPrimes {
             System.out.println("");
           }
           System.out.println("\f");
-          PAGENUMBER = PAGENUMBER + 1;
           PAGEOFFSET = PAGEOFFSET + linesPerColumn * columnsPerPage;
         }
+    }
+    
+    public void printCurrentPageHeading() {
+    	  System.out.println("The First " + numberOfPrimes +
+                               " Prime Numbers --- Page " + PAGENUMBER);
+          System.out.println("");
+          PAGENUMBER = PAGENUMBER + 1;
     }
 }
 
