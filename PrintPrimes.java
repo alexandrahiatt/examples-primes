@@ -35,7 +35,7 @@ public class PrintPrimes {
   }
 
   private void calculateOddPrimes() {
-      boolean isCurrentNumberPrime;
+      boolean isCrossedOff;
       int N;
 
       int currentNumber = 1;
@@ -51,15 +51,15 @@ public class PrintPrimes {
             squareOfPrimeToCheck = listOfPrimes[index] * listOfPrimes[index];
           }
           N = 2;
-          isCurrentNumberPrime = true;
-          while (N < index && isCurrentNumberPrime) {
+          isCrossedOff = false;
+          while (N < index && !isCrossedOff) {
             while (listOfMultiples[N] < currentNumber)
               listOfMultiples[N] = listOfMultiples[N] + listOfPrimes[N] + listOfPrimes[N];
             if (listOfMultiples[N] == currentNumber)
-              isCurrentNumberPrime = false;
+              isCrossedOff = true;
             N = N + 1;
           }
-        } while (!isCurrentNumberPrime);
+        } while (isCrossedOff);
         listOfPrimes[primesFoundSoFar] = currentNumber;
       }
     }
