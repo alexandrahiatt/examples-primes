@@ -39,20 +39,20 @@ public class PrintPrimes {
       int N;
 
       int currentNumber = 1;
-      int index = 2;
+      int largestMultipleIndex = 2;
       int squareOfPrimeToCheck = 9;
 
       for(int primesFoundSoFar = 2; primesFoundSoFar <= numberOfPrimes; primesFoundSoFar++) {
         do {
           currentNumber = currentNumber + 2;
           if (currentNumber == squareOfPrimeToCheck) {
-            listOfMultiples[index] = currentNumber;
-            index = index + 1;
-            squareOfPrimeToCheck = listOfPrimes[index] * listOfPrimes[index];
+            listOfMultiples[largestMultipleIndex] = currentNumber;
+            largestMultipleIndex = largestMultipleIndex + 1;
+            squareOfPrimeToCheck = listOfPrimes[largestMultipleIndex] * listOfPrimes[largestMultipleIndex];
           }
           N = 2;
           isCrossedOff = false;
-          while (N < index && !isCrossedOff) {
+          while (N < largestMultipleIndex && !isCrossedOff) {
             while (listOfMultiples[N] < currentNumber)
               setNextMultipleToCheck(N);
             if (listOfMultiples[N] == currentNumber)
