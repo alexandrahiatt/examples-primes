@@ -54,7 +54,7 @@ public class PrintPrimes {
           isCrossedOff = false;
           while (N < index && !isCrossedOff) {
             while (listOfMultiples[N] < currentNumber)
-              listOfMultiples[N] = listOfMultiples[N] + listOfPrimes[N] + listOfPrimes[N];
+              setNextMultipleToCheck(N);
             if (listOfMultiples[N] == currentNumber)
               isCrossedOff = true;
             N = N + 1;
@@ -64,6 +64,12 @@ public class PrintPrimes {
       }
     }
 
+    
+    public void setNextMultipleToCheck( int index ) {
+    	listOfMultiples[index] = listOfMultiples[index] + listOfPrimes[index] + listOfPrimes[index];
+    }
+    
+    
     public void printPrimes() {
         int pageOffset = 1;
         while (pageOffset <= numberOfPrimes) {
