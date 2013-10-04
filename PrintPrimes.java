@@ -1,14 +1,14 @@
 public class PrintPrimes {
   int numberOfPrimes;
-  int linesPerColumn
+  int linesPerColumn;
   int columnsPerPage;
   int listOfPrimes[];
   int listOfMultiples[];
 
-  public PrintPrimes(int numberOfPrimes, int RR, int CC) {
-    this.numberOfPrimes   = numberOfPrimes;
-    this.RR  = RR;
-    this.CC  = CC;
+  public PrintPrimes(int numberOfPrimes, int linesPerColumn, int columnsPerPage) {
+    this.numberOfPrimes = numberOfPrimes;
+    this.linesPerColumn = linesPerColumn;
+    this.columnsPerPage = columnsPerPage;
     this.listOfPrimes = new int[numberOfPrimes + 1];
     listOfMultiples[] = new int[numberOfPrimes + 1];
   }
