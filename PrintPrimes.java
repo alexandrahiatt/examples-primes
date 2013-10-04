@@ -1,16 +1,18 @@
 public class PrintPrimes {
   int numberOfPrimes;
-  int linesPerColumn;
-  int columnsPerPage;
   int listOfPrimes[];
   int listOfMultiples[];
+ 
+  int linesPerColumn;
+  int columnsPerPage;
 
   public PrintPrimes(int numberOfPrimes, int linesPerColumn, int columnsPerPage) {
     this.numberOfPrimes = numberOfPrimes;
+    this.listOfPrimes = new int[numberOfPrimes + 1];
+    this.listOfMultiples[] = new int[numberOfPrimes + 1];
+    
     this.linesPerColumn = linesPerColumn;
     this.columnsPerPage = columnsPerPage;
-    this.listOfPrimes = new int[numberOfPrimes + 1];
-    listOfMultiples[] = new int[numberOfPrimes + 1];
   }
 
 
@@ -19,6 +21,7 @@ public class PrintPrimes {
       printPrimes.calculatePrimes();
       printPrimes.printPrimes();
   }
+
 
   public void calculatePrimes() {
       /* Two is the only even prime. All other prime numbers are odd.
